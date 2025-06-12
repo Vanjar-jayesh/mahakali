@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.nav1{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 8px 9%;
+    background: rgb(154, 156, 232); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav1:hover{
+  color: brown;
+}
+ ul li a:hover{
+  color: #343a40;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.hero {
+  background: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg') center/cover no-repeat;
+  color: white;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+
+.form-section {
+  padding: 2em;
+  background-color: #f9f9f9;
+}
+
+.reservation-form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.reservation-form h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.reservation-form input,
+.reservation-form button {
+  width: 100%;
+  padding: 0.75em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reservation-form button {
+  background: #28a745;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reservation-form button:hover {
+  background: #218838;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .reservation-form {
+    padding: 1em;
+  }
+}
+
+.card1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    padding: 10px;
+    
+}
+
+.card2{
+    width: 100px;
+    background-color: #9f3a3a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 25px;
+}
+ .serc2{
+  margin-left: 45%;
+    color: #f0f0f0;
+ }
+
+  .serc3{
+  margin-left: 30%;
+  flex-wrap: wrap;
+  color: wheat;
+  font: optional;
+  font-size: 25px;
+ }
