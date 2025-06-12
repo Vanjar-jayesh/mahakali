@@ -1,0 +1,45 @@
+.collapse{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: aliceblue;
+    background: rgb(47, 47, 55); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+    align-items: center; justify-content: center; color: aliceblue; padding: 10px;
+
+}
+
+a{
+    color: aliceblue;
+}
+
+
+.section1{
+ margin-top:10px;
+
+}
+.section2{
+    display: flex;
+    margin: 10px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.card{
+    margin: 10px;
+}
+h1 {
+  text-align: center;
+  color: rgb(196, 25, 25);
+  line-height: 100px;
+  border-radius: 20px;
+  margin-left: 500px;
+  margin-right: 500px;
+  background-color: brown;
+  padding: 10px;
+}
