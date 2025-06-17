@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-commerce Cards</title>
+  <style>
+    .product-card, .cart-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .btn {
+      padding: 5px 10px;
+      margin-top: 5px;
+      cursor: pointer;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .delete-btn {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Products</h2>
+  <div id="product-list"></div>
+
+  <h2>Cart</h2>
+  <div id="cart-list"></div>
+  <h3>Total: ₹<span id="total">0</span></h3>
+
+  <script>
+    const products = [
+      { id: 1, name: "T-Shirt", price: 500 },
+      { id: 2, name: "Jeans", price: 1200 },
+      { id: 3, name: "Shoes", price: 2000 },
+    ];
+
+    let cart = [];
+
+    function displayProducts() {
+      const productList = document.getElementById('product-list');
+      productList.innerHTML = '';
+      products.forEach(product => {
+        productList.innerHTML += `
+          <div class="product-card">
+            <h4>${product.name}</h4>
+            <p>Price: ₹${product.price}</p>
+            <button class="btn" onclick="addToCart(${product.id})">Add to Cart</button>
+          </div>
+        `;
+      });
+    }
+
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      cart.push(product);
+      updateCart();
+    }
+
+    function deleteFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById('cart-list');
+      const totalSpan = document.getElementById('total');
+      cartList.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        cartList.innerHTML += `
+          <div class="cart-item">
+            <h4>${item.name}</h4>
+            <p>₹${item.price}</p>
+            <button class="btn delete-btn" onclick="deleteFromCart(${index})">Delete</button>
+          </div>
+        `;
+      });
+
+      totalSpan.textContent = total;
+    }
+
+    displayProducts();
+  </script>
+
+</body>
+</html>
