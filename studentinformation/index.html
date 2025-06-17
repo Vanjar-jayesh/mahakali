@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stident infromation</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto text-right">
+        <li class="nav-item">
+          <a class="nav-link " href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">protfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <div class="dic1"> 
+    <table class="ta1">
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="on">
+                    <div>
+                        <label> Student ID</label>
+                         <input id="studentid" min="6" type="text" />
+                         <button  type="button" onclick="generateId()" >Generate ID</button>
+                    </div>
+                    <div>
+                        <label >Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName" required>
+                    </div>
+                    <div>
+                        <label>Email*</label><label class="validation-error hide" id="EmailValidationError">This field is required.</label>
+                        <input type="text" name="Email" id="Email"  required>
+                    </div>
+                    <div>
+                        <label>class</label>
+                        <input type="text" name="class" id="class">
+                    </div>
+                    <div>
+                        <label>section</label>
+                        <input type="text" name="section" id="section">
+                    </div>
+                      <div>
+                        <label>mobile</label>
+                        <input type="text" name="mobile" id="mobile">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="studentList">
+                    <thead>
+                        <tr>
+                            <th>Studen Id</th>
+                            <th>stunde Name</th>
+                            <th>Email</th>
+                            <th>calss</th>
+                            <th>section</th>
+                            <th>mobile</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div> -->
+
+<div class="container">
+<div class="wrapper">
+    <div class="row">
+        <div class="col-md-5">
+            <h1 class="h1">student infromation</h1>
+            <div class="feature-box">
+        
+               <form id="userForm1">
+                    <div>
+                        <label> Student ID</label>
+                         <input id="studentid" min="6" type="text" name="studentid"  placeholder="StudentID"/>
+                         <button  type="button" onclick="generateId()" >Generate ID</button>
+                    </div>
+                    <div>
+                        <label >Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="" required placeholder="fullName">
+                    </div>
+                    <div>
+                        <label>Email*</label><label class="validation-error hide" id="EmailValidationError">This field is required.</label>
+                        <input type="text" name="Email" id="Email"  required placeholder="Email">
+                    </div>
+                    <div>
+                        <label>class</label>
+                        <input type="text" name="class" id="class" placeholder="class">
+                    </div>
+                    <!-- <div>
+                        <label>section</label>
+                        <input type="text" name="section" id="section">
+                    </div> -->
+                      <div>
+                        <label>mobile</label>
+                        <input type="number" name="mobile" id="mobile" placeholder="mobile">
+                    </div>
+
+                    <!-- <div>
+                        <!-- <label for=""></label> 
+                         <input type="text" id="stuat" hidden>
+                    </div> -->
+                    <div  class="form-action-buttons">
+                        <button type="submit">Save</button>
+                        <!-- <input type="submit" value="Submit" class="text-bg-danger" id="submit"> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+          <div class="col-md-6 mt-10">
+                   <!-- <table class="list" id="studentList">
+                    <thead>
+                        <tr>
+                            <th>Studen Id</th>
+                            <th>stunde Name</th>
+                            <th>Email</th>
+                            <th>calss</th>
+                            <!-- <th>section</th> 
+                            <th>mobile</th>
+                            <th>Edit</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table> -->
+                <table class="table" id="userTable" >
+  <thead>
+    <tr class="tr">
+      <th scope="col" style="color: black;">Studen Id</th>
+      <th scope="col">stunde Name</th>
+      <th scope="col">Email</th>
+       <th scope="col">calss</th>
+      <th scope="col">mobile</th>
+       <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+     <!-- <td id="id"></td>
+      <td id="name"></td>
+      <td id="Email"></td>
+       <td id="calss"></td>
+      <td id="mobile"></td> -->
+  </tbody>
+</table>
+            </div>
+    </div>
+</div>
+</div>
+<script>
+  let users = [];
+  let editIndex = -1;
+
+  const form = document.getElementById('userForm');
+  const tableBody = document.querySelector('#userTable tbody');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let id = document.getElementById('id').value.trim(); // new
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (editIndex === -1) {
+      // Add new
+      users.push({id,name, email, deleted: false});
+    } else {
+      // Update existing
+      users[editIndex].name = name;
+      users[editIndex].email = email;
+      editIndex = -1;
+    }
+
+    form.reset();
+    renderTable();
+  });
+
+  function renderTable() {
+    tableBody.innerHTML = '';
+
+    users.forEach((user, index) => {
+      const row = document.createElement('tr');
+      row.className = user.deleted ? 'deleted' : '';
+
+      row.innerHTML = `
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>
+          ${user.deleted ? '' : `<button onclick="editUser(${index})">Edit</button>`}
+          <button onclick="softDeleteUser(${index})">${user.deleted ? 'Restore' : 'Delete'}</button>
+        </td>
+      `;
+
+      tableBody.appendChild(row);
+    });
+  }
+
+  function editUser(index) {
+    document.getElementById('name').value = users[index].name;
+    document.getElementById('email').value = users[index].email;
+    editIndex = index;
+  }
+
+  function softDeleteUser(index) {
+    users[index].deleted = !users[index].deleted; // Toggle delete
+    renderTable();
+  }
+
+    function generateId() {
+        const id = Math.floor(1000 + Math.random() * 90000);
+        document.getElementById("id").value = id;
+      }
+
+</script>
+<!-- <form id="userForm">
+  <input type="text" id="name" placeholder="Enter name" required />
+  <input type="email" id="email" placeholder="Enter email" required />
+  <button type="submit">Save</button>
+</form>
+
+<table id="userTable">
+  <thead>
+    <tr><th>Name</th><th>Email</th><th>Actions</th></tr>
+  </thead>
+  <tbody></tbody>
+</table> -->
+        
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
